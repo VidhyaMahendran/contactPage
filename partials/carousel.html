@@ -1,0 +1,13 @@
+<div class="carouselContainer">
+	<div class="carouselRow">
+		<div ng-repeat="row in carouselData">
+			<h3>{{ row.heading }}</h3>
+			<p>
+				<img ng-src="{{ row.image }}" alt="{{ row.heading }}" />
+			</p>
+			<p>
+				{{ row.text }}
+			</p>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" ng-app="contactApp">
+	<head>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="Description" content="Sapient - Contact Us page">
+	  <title>Sapient - Contact Us page</title>
+	  <script src="js/angular.min.js"></script>
+	  <script src="js/angular-route.min.js"></script>
+	  <script src="js/app.js"></script>
+	</head>
+	<body>
+	  <div id="wrapper" ng-controller="ContactController">
+	    <header role="header" id="headerSection">
+	      <section class="navbar">
+	        <div class="header">
+              <a class="brand navbar-brand" href="#/">
+                <img src="img/logo.png" class="logo" alt="Sapient" />
+              </a>
+              <ul class="nav">
+                <li><a href="#/home">Home</a></li>
+                <li><a href="#/about">About Us</a></li>
+                <li><a href="#/projects">Projects</a></li>
+                <li><a href="#/contact">Contact Us</a></li>
+               </ul>
+	        </div>
+	      </section>
+	    </header>
+	    <section role="main" class="container">
+	      <div class="main-grid">
+	        <div class="grid-left">
+	          <ng-include src="'partials/carousel.html'"></ng-include>
+	        </div>
+	        <div class="grid-right">
+	          <ng-view></ng-view>
+	        </div>
+	      </div>
+	    </section>
+	    <footer id="footer">
+	      <div class="footer container">
+	        <p>
+	          Copyright &copy; {{ currentYear }} Sapient Corporation. All rights reserved.
+	        </p>
+	      </div>
+	    </footer>
+	  </div>
+	</body>
+</html>
